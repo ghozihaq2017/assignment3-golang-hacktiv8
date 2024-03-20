@@ -15,7 +15,7 @@ type Weather struct {
 
 func (w *Weather) checkStatus() (resWater string, resWind string) {
 	switch {
-	case w.Water < 5:
+	case w.Water <= 5:
 		resWater = "aman"
 	case w.Water >= 6 && w.Water <= 8:
 		resWater = "siaga"
@@ -24,7 +24,7 @@ func (w *Weather) checkStatus() (resWater string, resWind string) {
 	}
 
 	switch {
-	case w.Wind < 6:
+	case w.Wind <= 6:
 		resWind = "aman"
 	case w.Wind >= 7 && w.Wind <= 15:
 		resWind = "siaga"
